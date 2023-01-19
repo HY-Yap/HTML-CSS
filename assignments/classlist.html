@@ -1,6 +1,10 @@
 <html>
   <head>
     <style>
+      html {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDAMPdY4HMgNcpUN2Yt4GLDAt3CdgscWBa5g&usqp=CAU);
+        background-size: cover;
+      }
       h1 {
         text-align: center;
       }
@@ -8,16 +12,41 @@
         display: flex;
         justify-content: center;
       }
+      table,
+      td,
+      th {
+        border: 1px solid grey;
+        border-collapse: collapse;
+      }
       thead {
         background-color: black;
         color: white;
         text-align: center;
       }
       tbody:nth-child(odd) {
-        background-color: rgb(149, 236, 149);
+        background-color: rgb(169, 233, 169);
       }
       tbody:nth-child(even) {
-        background-color: rgb(231, 186, 186);
+        background-color: rgb(246, 192, 192);
+      }
+      tbody.me {
+        background-color: blue;
+        color: white;
+      }
+      tbody:hover {
+        background-color: rgb(182, 244, 244);
+        color: black;
+        cursor: pointer;
+      }
+      td:nth-child(1) {
+        width: 7em;
+        text-align: center;
+      }
+      td:nth-child(2) {
+        width: 15em;
+      }
+      td:nth-child(3) {
+        width: 6em;
       }
     </style>
   </head>
@@ -26,19 +55,19 @@
     <div>
       <table>
         <thead>
-          <td>No.</td>
+          <td>Index Number</td>
           <td>Name</td>
-          <td>Birthday Month</td>
+          <td>Birth Month</td>
         </thead>
         <tbody>
           <td>1</td>
           <td>William</td>
-          <td>Sep</td>
+          <td>September</td>
         </tbody>
         <tbody>
           <td>2</td>
           <td>Benjamin</td>
-          <td>Dec</td>
+          <td>December</td>
         </tbody>
         <tbody>
           <td>3</td>
@@ -53,7 +82,7 @@
         <tbody>
           <td>5</td>
           <td>Nicholas</td>
-          <td>Aug</td>
+          <td>August</td>
         </tbody>
         <tbody>
           <td>6</td>
@@ -63,122 +92,122 @@
         <tbody>
           <td>7</td>
           <td>Vincent</td>
-          <td>Dec</td>
+          <td>December</td>
         </tbody>
         <tbody>
           <td>8</td>
           <td>George</td>
-          <td>Apr</td>
+          <td>April</td>
         </tbody>
         <tbody>
           <td>9</td>
           <td>Daniel</td>
-          <td>Jan</td>
+          <td>January</td>
         </tbody>
         <tbody>
           <td>10</td>
           <td>Christopher</td>
-          <td>Feb</td>
+          <td>Febuary</td>
         </tbody>
         <tbody>
           <td>11</td>
           <td>Hayden</td>
-          <td>Aug</td>
+          <td>August</td>
         </tbody>
         <tbody>
           <td>12</td>
           <td>Ronald</td>
-          <td>Jun</td>
+          <td>June</td>
         </tbody>
         <tbody>
           <td>13</td>
           <td>Franklin</td>
-          <td>Nov</td>
+          <td>November</td>
         </tbody>
         <tbody>
           <td>14</td>
           <td>Cooper</td>
-          <td>Sep</td>
+          <td>September</td>
         </tbody>
         <tbody>
           <td>15</td>
           <td>Terence</td>
-          <td>Oct</td>
+          <td>October</td>
         </tbody>
         <tbody>
           <td>16</td>
           <td>Astley</td>
-          <td>Feb</td>
+          <td>Febuary</td>
         </tbody>
         <tbody>
           <td>17</td>
           <td>Bruce</td>
-          <td>Nov</td>
+          <td>November</td>
         </tbody>
         <tbody>
           <td>18</td>
           <td>Arnold</td>
-          <td>Aug</td>
+          <td>August</td>
         </tbody>
         <tbody>
           <td>19</td>
           <td>Bruno</td>
-          <td>Oct</td>
+          <td>October</td>
         </tbody>
         <tbody>
           <td>20</td>
           <td>Kenley</td>
-          <td>Oct</td>
+          <td>October</td>
         </tbody>
         <tbody>
           <td>21</td>
           <td>Boston</td>
-          <td>Jan</td>
+          <td>January</td>
         </tbody>
-        <tbody>
+        <tbody class="me">
           <td>22</td>
-          <td>Jeremy</td>
-          <td>Jul</td>
+          <td>Han Yang</td>
+          <td>Febuary</td>
         </tbody>
         <tbody>
           <td>23</td>
           <td>David</td>
-          <td>Sep</td>
+          <td>September</td>
         </tbody>
         <tbody>
           <td>24</td>
           <td>Alan</td>
-          <td>Jul</td>
+          <td>July</td>
         </tbody>
         <tbody>
           <td>25</td>
           <td>Wilder</td>
-          <td>Dec</td>
+          <td>December</td>
         </tbody>
         <tbody>
           <td>26</td>
           <td>Martin</td>
-          <td>Jun</td>
+          <td>June</td>
         </tbody>
         <tbody>
           <td>27</td>
           <td>Sonny</td>
-          <td>Apr</td>
+          <td>April</td>
         </tbody>
         <tbody>
           <td>28</td>
           <td>Anthony</td>
-          <td>Aug</td>
+          <td>August</td>
         </tbody>
         <tbody>
           <td>29</td>
           <td>Kenneth</td>
-          <td>Dec</td>
+          <td>December</td>
         </tbody>
         <tbody>
           <td>30</td>
           <td>Malcom</td>
-          <td>Jan</td>
+          <td>January</td>
         </tbody>
       </table>
     </div>

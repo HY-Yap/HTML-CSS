@@ -1,16 +1,47 @@
 <!DOCTYPE html>
+<!-- 
+  NOTE:
+
+  I coded this so that it looks EXACTLY THE SAME as the one provided by Dr Chia in the Web Publishing website.
+
+  This means that LOTS of stuff like the font outline in the header were not given in the instructions and 
+  we weren't taught how to do it. So if you do not understand such stuff please don't add that to your assignment
+  as it's just stupid.
+
+  And for the images, you can see that I commented out the actual image and used a random testing image instead.
+  This is cos the image provided can't be viewed unless using a school laptop. So before submitting please remember
+  to DELETE THE TESTING IMAGE AND UNCOMMENT THE CORRECT ONE.
+
+  To uncomment on VS Code just highlight that section and press CMD / for mac and CTRL / for windows.
+
+  Then only when done delete this long ass message and submit it :)
+
+  Don't delete this comment now else u might forget then later lots of marks gone
+
+  Or just don't copy my code cos it might also be too confusing
+
+  Any questions DM me
+
+  (btw this is a comment so it does not affect the code in any way, hence it appears green in VSC)
+-->
 <html>
   <head>
     <style>
-      h1,
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap");
       footer {
+        font-family: "Open Sans", sans-serif;
         background-color: black;
         color: white;
         text-align: center;
       }
       h1 {
+        font-family: "Roboto", sans-serif;
+        background-color: black;
+        color: red;
+        text-align: center;
         padding: 10px;
-        border: 2px solid red;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
       }
       footer {
         padding: 1px;
@@ -21,10 +52,6 @@
         grid-template-columns: repeat(5, minmax(0, 1fr));
         margin: 2em;
       }
-      .centergrid {
-        display: flex;
-        justify-content: center;
-      }
       img {
         object-position: center;
         max-width: 100%;
@@ -32,12 +59,18 @@
         border-radius: 50%;
         transition: transform 1s ease-in-out;
       }
+      div {
+        font-size: 12px;
+        font-family: "Open Sans", sans-serif;
+      }
       div > p::first-line {
         font-weight: bold;
       }
       div > p::first-letter {
-        color: red;
-        font-size: 2em;
+        color: rgb(215, 0, 0);
+        font-size: 3em;
+        float: left;
+        line-height: 35px;
       }
       div:hover > img {
         transform: rotate(45deg);
@@ -46,8 +79,8 @@
   </head>
   <body>
     <h1>DC SUPERHEROES</h1>
-    <div class="centergrid">
-      <div class="container">
+    <div class="container">
+      <div>
         <!-- <img
         src="https://drive.google.com/thumbnail?id=1qCVO7SWx60VeUlqKCxLe8TNmyypBUNPG"
         alt="superman"
@@ -67,7 +100,7 @@
           abilities, such as incredible strength and impervious skin.
         </p>
       </div>
-      <div class="container">
+      <div>
         <!-- <img
         src="https://drive.google.com/thumbnail?id=1W7Ni_CcIsrwB5QOPcdoIpCxw-lytlWX9"
         alt="batman"
@@ -89,7 +122,7 @@
           the dark...this avenger of evil. The Batman."
         </p>
       </div>
-      <div class="container">
+      <div>
         <!-- <img
         src="https://drive.google.com/thumbnail?id=1F8TAn6uHJMvHga65ol5MhlpyDcZ_H06c"
         alt="wonder woman"
@@ -109,7 +142,7 @@
           invisible plane, and she adopts the secret identity of Diana Prince.
         </p>
       </div>
-      <div class="container">
+      <div>
         <!-- <img
         src="https://drive.google.com/thumbnail?id=1ZkyrZjo29-SZSKdQ5TkQ_0VVyN_7Jqk8"
         alt="dr strange"
@@ -131,7 +164,7 @@
           Mystic Arts".
         </p>
       </div>
-      <div class="container">
+      <div>
         <!-- <img
         src="https://drive.google.com/thumbnail?id=1I96JCw6A21BzFKE7lgp2mZfyXKjy_SZz"
         alt="hellboy"

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .body {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        position: relative;
+      }
+      .eye {
+        width: 22px;
+        height: 22px;
+        background-color: blue;
+        top: 20px;
+        left: 90px;
+        border-radius: 50%;
+        position: absolute;
+      }
+      .mouth {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 95px;
+        border-left-width: 0px;
+        border-color: transparent;
+        border-right-color: white;
+        top: 5px;
+        right: -105px;
+        position: relative;
+      }
+      .mouth p {
+        width: max-content;
+        padding-left: 30px;
+        margin-top: 0px;
+        transform: rotate(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="eye"></div>
+      <div class="mouth">
+        <p>Yap Han Yang</p>
+      </div>
+    </div>
+  </body>
+</html>

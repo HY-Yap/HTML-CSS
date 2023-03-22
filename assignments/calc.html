@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h2,
+      h3,
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>A Simple Calculator</h2>
+    <p>
+      1st Number: <input class="input1" type="text" onkeyup="saveInput()" />
+    </p>
+    <p>
+      2nd Number: <input class="input2" type="text" onkeyup="saveInput()" />
+    </p>
+    <br />
+    <p>Auto Sum</p>
+    <input class="sum" type="text" />
+    <p>Auto Difference</p>
+    <input class="diff" type="text" />
+    <p>Auto Product</p>
+    <input class="product" type="text" />
+    <h3>Click the button to reveal my name</h3>
+    <div>
+      <button class="btn" onclick="show()">My Name</button>
+    </div>
+    <script>
+      function saveInput() {
+        var input1 = document.querySelector(".input1").innerHTML;
+        var input2 = document.querySelector(".input2").innerHTML;
+        var sum = input1 + input2;
+        var diff = input1 - input2;
+        var product = input1 * input2;
+        document.querySelector(".sum").innerText = sum;
+        document.querySelector(".diff").innerText = diff;
+        document.querySelector(".product").innerText = product;
+      }
+      function show() {
+        document.querySelector(".btn").innerHTML = "Yap Han Yang";
+      }
+    </script>
+  </body>
+</html>

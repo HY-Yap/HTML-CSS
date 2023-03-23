@@ -2,6 +2,9 @@
 <html>
   <head>
     <style>
+      body {
+        background-color: aqua;
+      }
       h2,
       h3,
       div {
@@ -30,17 +33,23 @@
     </div>
     <script>
       function saveInput() {
-        var input1 = document.querySelector(".input1").innerHTML;
-        var input2 = document.querySelector(".input2").innerHTML;
-        var sum = input1 + input2;
-        var diff = input1 - input2;
-        var product = input1 * input2;
-        document.querySelector(".sum").innerText = sum;
-        document.querySelector(".diff").innerText = diff;
-        document.querySelector(".product").innerText = product;
+        var input1 = parseInt(document.querySelector(".input1").value);
+        var input2 = parseInt(document.querySelector(".input2").value);
+        document.querySelector(".sum").value = input1 + input2;
+        document.querySelector(".diff").value = input1 - input2;
+        document.querySelector(".product").value = input1 * input2;
+        if (
+          document.querySelector(".input1").value == "" ||
+          document.querySelector(".input2").value == ""
+        ) {
+          document.querySelector(".sum").value = null;
+          document.querySelector(".diff").value = null;
+          document.querySelector(".product").value = null;
+        } // if input is empty the output will be blank and not show NaN
       }
       function show() {
-        document.querySelector(".btn").innerHTML = "Yap Han Yang";
+        document.querySelector("h3").innerHTML = "Yap Han Yang";
+        document.querySelector("button").style.display = "none";
       }
     </script>
   </body>

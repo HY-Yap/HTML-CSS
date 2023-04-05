@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      div.calc {
+        padding: 30px 100px;
+        border: 3px solid rgb(169, 168, 168);
+        margin: 30px 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator V2.0</h1>
+    <div class="calc">
+      <p>x: <input type="text" class="input1" onkeyup="calculate()" /></p>
+      <p>y: <input type="text" class="input2" onkeyup="calculate()" /></p>
+      <p>
+        <button class="x^y" onclick="result1()">x<sup>y</sup></button>
+        <button>x<sup>1/y</sup></button>
+        <button>(x<sup>2</sup>+y<sup>2</sup>)<sup>1/2</sup></button>
+        <button>tan<sup>-1</sup>(<sup>y</sup>&frasl;<sub>x</sub>)</button>
+      </p>
+      <p>Result: <input type="text" /></p>
+      <script>
+        function input() {
+          input1 = parseInt(document.querySelector("input1").value);
+          input2 = parseInt(document.querySelector("input2").value);
+          output1 = Math.pow(input1, input2);
+          output2 = Math.pow(input1, 1 / input2);
+          output3 = Math.pow(x ** x + y ** y, 1 / 2);
+        }
+        function result1() {}
+      </script>
+    </div>
+  </body>
+</html>

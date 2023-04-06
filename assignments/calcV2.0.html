@@ -2,6 +2,9 @@
 <html>
   <head>
     <style>
+      body {
+        background-color: lightblue;
+      }
       h1 {
         text-align: center;
       }
@@ -10,7 +13,7 @@
         border: 3px solid rgb(169, 168, 168);
         margin: 30px 80px;
       }
-      p {
+      footer {
         text-align: center;
       }
     </style>
@@ -18,8 +21,8 @@
   <body>
     <h1>Calculator V2.0</h1>
     <div class="calc">
-      <p>x: <input type="text" class="x" onkeyup="save()" /></p>
-      <p>y: <input type="text" class="y" onkeyup="save()" /></p>
+      <p>x: <input type="text" class="x" /></p>
+      <p>y: <input type="text" class="y" /></p>
       <p>
         <button onclick="output(1)">x<sup>y</sup></button>
         <button onclick="output(2)">x<sup>1/y</sup></button>
@@ -32,13 +35,12 @@
       </p>
       <p>Result: <input type="text" class="result" /></p>
     </div>
-    <p>Done by Yap Han Yang © 2023</p>
+    <footer>Done by Yap Han Yang © 2023</footer>
     <script>
-      function save() {
+      function output(n) {
         x = parseInt(document.querySelector(".x").value);
         y = parseInt(document.querySelector(".y").value);
-      }
-      function output(n) {
+
         if (n == 1) {
           document.querySelector(".result").value = Math.pow(x, y);
         } else if (n == 2) {
@@ -61,7 +63,7 @@
         } else if (document.querySelector(".result").value == "NaN") {
           document.querySelector(".result").value = null;
           alert("Please enter numbers only");
-        } //displays error if any
+        } //displays error if any if you're gonna copy my code you can remove this it's just extra
       }
     </script>
   </body>

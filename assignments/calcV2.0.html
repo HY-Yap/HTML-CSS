@@ -10,30 +10,59 @@
         border: 3px solid rgb(169, 168, 168);
         margin: 30px 80px;
       }
+      p {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <h1>Calculator V2.0</h1>
     <div class="calc">
-      <p>x: <input type="text" class="input1" onkeyup="calculate()" /></p>
-      <p>y: <input type="text" class="input2" onkeyup="calculate()" /></p>
+      <p>x: <input type="text" class="x" onkeyup="save()" /></p>
+      <p>y: <input type="text" class="y" onkeyup="save()" /></p>
       <p>
-        <button class="x^y" onclick="result1()">x<sup>y</sup></button>
-        <button>x<sup>1/y</sup></button>
-        <button>(x<sup>2</sup>+y<sup>2</sup>)<sup>1/2</sup></button>
-        <button>tan<sup>-1</sup>(<sup>y</sup>&frasl;<sub>x</sub>)</button>
+        <button onclick="output(1)">x<sup>y</sup></button>
+        <button onclick="output(2)">x<sup>1/y</sup></button>
+        <button onclick="output(3)">
+          (x<sup>2</sup>+y<sup>2</sup>)<sup>1/2</sup>
+        </button>
+        <button onclick="output(4)">
+          tan<sup>-1</sup>(<sup>y</sup>&frasl;<sub>x</sub>)
+        </button>
       </p>
-      <p>Result: <input type="text" /></p>
-      <script>
-        function input() {
-          input1 = parseInt(document.querySelector("input1").value);
-          input2 = parseInt(document.querySelector("input2").value);
-          output1 = Math.pow(input1, input2);
-          output2 = Math.pow(input1, 1 / input2);
-          output3 = Math.pow(x ** x + y ** y, 1 / 2);
-        }
-        function result1() {}
-      </script>
+      <p>Result: <input type="text" class="result" /></p>
     </div>
+    <p>Done by Yap Han Yang © 2023</p>
+    <script>
+      function save() {
+        x = parseInt(document.querySelector(".x").value);
+        y = parseInt(document.querySelector(".y").value);
+      }
+      function output(n) {
+        if (n == 1) {
+          document.querySelector(".result").value = Math.pow(x, y);
+        } else if (n == 2) {
+          document.querySelector(".result").value = Math.pow(x, 1 / y);
+        } else if (n == 3) {
+          document.querySelector(".result").value = Math.pow(
+            x ** x + y ** y,
+            1 / 2
+          );
+        } else if (n == 4) {
+          document.querySelector(".result").value = Math.atan(y / x);
+        }
+
+        if (
+          document.querySelector(".x").value == "" ||
+          document.querySelector(".y").value == ""
+        ) {
+          document.querySelector(".result").value = null;
+          alert("Please enter both x and y values");
+        } else if (document.querySelector(".result").value == "NaN") {
+          document.querySelector(".result").value = null;
+          alert("Please enter numbers only");
+        } //displays error if any
+      }
+    </script>
   </body>
 </html>

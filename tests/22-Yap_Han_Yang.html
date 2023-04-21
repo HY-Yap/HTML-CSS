@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("https://drive.google.com/thumbnail?id=19pIbaLcakn2hNsxaN-TcvnylQ5B9zLHr");
+        background-size: cover;
+      }
+      h1 {
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        margin: 0.3rem;
+      }
+      li:hover {
+        transform: rotate(45deg);
+      }
+      p.desc::first-letter {
+        font-size: 2rem;
+        float: left;
+        line-height: 2.2rem;
+        color: red;
+      }
+      p.desc::first-line {
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My School ID Number</h1>
+    <ul>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=1NccxbhOvpkiTWSyo32CDis9hfVTQFtD1"
+        />
+      </li>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=1NccxbhOvpkiTWSyo32CDis9hfVTQFtD1"
+        />
+      </li>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=1LgYtij5yXGybL-Tl5coJl-SbZhLdNP8H"
+        />
+      </li>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=1JWWTNIwGr2qCePVuB_X3gpqdy82NUeGE"
+        />
+      </li>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=1WJJQRQr5x7vyhkmVNUN60tiiRW4UHWQi"
+        />
+      </li>
+      <li>
+        <img
+          src="https://drive.google.com/thumbnail?id=17oNhQGXQgCORR5T4Q8sB9YQ29q3JZJ_H"
+        />
+      </li>
+    </ul>
+
+    <p class="desc">
+      Hello, I am a 14-year old student from Hwa Chong Institution and I am
+      currently in secondary 2A1. I am taking many subjects like English, Higher
+      Chinese, Mathematics, Lower Secondary Science, History, Geography, Arts,
+      etc. One of the more interesting subjects is Infocomm and I learned about
+      web-publishing like HTML (Hypertext Markup Language), CSS (Cascading Style
+      Sheets) and JS (Javascript). I hope to do well in the Infocomm subject and
+      passed the tests with flying colors.
+    </p>
+    <p id="doneby">
+      Webpage created by ???.
+      <button onclick="show()">Click here to reveal my name</button>
+    </p>
+    <script>
+      function show() {
+        document.querySelector("#doneby").innerHTML =
+          "Webpage created by Yap Han Yang.";
+      }
+    </script>
+  </body>
+</html>

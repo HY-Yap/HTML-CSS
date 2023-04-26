@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: palevioletred;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      button {
+        font-weight: bold;
+        height: 3rem;
+      }
+      div {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Images</h1>
+    <img
+      src="https://drive.google.com/thumbnail?id=1ofkEVHRaGSRBPSLMEb4LPN3o5h3vyvip"
+    />
+    <div></div>
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+      imageArray = [
+        "https://drive.google.com/thumbnail?id=1ofkEVHRaGSRBPSLMEb4LPN3o5h3vyvip",
+        "https://drive.google.com/thumbnail?id=1NhHpVT39dHMd9gDhdAyzoqTnuI0Uyam-",
+        "https://drive.google.com/thumbnail?id=1wD7cnjc3-nG2qLaWenOo0SPtiTwsSWhn",
+        "https://drive.google.com/thumbnail?id=11rA0nuemQqRURug8urs1OMZAsi2965FL",
+        "https://drive.google.com/thumbnail?id=1IpaYdAzPn2xe63KwVJ50fRNjjTLJHabt",
+      ];
+      current = 0;
+      function changeImage() {
+        current++;
+        if (current > 4) {
+          current = 0;
+        }
+        document.querySelector("img").src = imageArray[current];
+      }
+    </script>
+  </body>
+</html>

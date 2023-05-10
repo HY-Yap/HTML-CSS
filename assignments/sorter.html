@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: rgba(0, 204, 255, 0.76);
+      }
+      h1 {
+        text-align: center;
+      }
+      div {
+        text-align: center;
+      }
+      button {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 1rem 2rem;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Sorter Page</h1>
+    <h2>
+      List of fruits (unsorted): Banana, Orange, Apple, Mango, Watermelon, Pear,
+      Guava, Durian, Chicku, Dragonfruit, Jackfruit.
+    </h2>
+    <h2>
+      List of numbers (unsorted): 58, 144, 7, 24, 69, 125, 85, 11, 152, 67, 170,
+      88, 72, 103, 88
+    </h2>
+    <br />
+    <div>
+      <button onclick="sort(1)">Sort A to Z</button>
+      <button onclick="sort(2)">Sort Z to A</button>
+      <button onclick="sort(3)">Sort numerically (ascending)</button>
+      <button onclick="sort(4)">Sort numerically (descending)</button>
+      <br />
+      <p></p>
+    </div>
+    <script>
+      fruits = [
+        "Banana",
+        "Orange",
+        "Apple",
+        "Mango",
+        "Watermelon",
+        "Pear",
+        "Guava",
+        "Durian",
+        "Chicku",
+        "Dragonfruit",
+        "Jackfruit",
+      ];
+      numbers = [
+        58, 144, 7, 24, 69, 125, 85, 11, 152, 67, 170, 88, 72, 103, 88,
+      ];
+      function sort(n) {
+        if (n == 1) {
+          fruits.sort();
+          document.querySelector("p").innerHTML = fruits;
+        } else if (n == 2) {
+          fruits.sort();
+          fruits.reverse();
+          document.querySelector("p").innerHTML = fruits;
+        } else if (n == 3) {
+          numbers.sort(function (a, b) {
+            return a - b;
+          });
+          document.querySelector("p").innerHTML = numbers;
+        } else if (n == 4) {
+          numbers.sort(function (a, b) {
+            return b - a;
+          });
+          document.querySelector("p").innerHTML = numbers;
+        }
+      }
+    </script>
+  </body>
+</html>
